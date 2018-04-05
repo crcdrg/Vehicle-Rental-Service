@@ -12,7 +12,7 @@ public class Lorry extends Vehicle implements Serializable {
 	private int load_weight;
 	private int loading_cap;
 
-	public Lorry(int kilometeres, int numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, int loading_cap, int load_weight) {
+	public Lorry(int kilometeres, String numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, int loading_cap, int load_weight) {
 		super(kilometeres, numberOfSeats, make, model);
 		// TODO Auto-generated constructor stub
 		this.top_speed = top_speed;

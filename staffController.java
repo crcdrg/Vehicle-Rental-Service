@@ -19,5 +19,12 @@ public class staffController implements ActionListener {
 			AddCustomerController customerController = new AddCustomerController(customerGUI, model);
 			customerGUI.addListeners(customerController);
 		}
+		
+		
+		 if (action.equalsIgnoreCase("Add Car")){
+			addCarView addCarGUI = new addCarView();
+			AddCarController carCntrl = new AddCarController(addCarGUI, model);
+			addCarGUI.addListeners(carCntrl);
+		}
 	}
 }

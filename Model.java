@@ -12,8 +12,8 @@ import java.util.List;
 public class Model { // Creation of the Class model with 5 arraylists which contain the Car, Lorry,
 						// Minibus, staff and customers.
 
-	// String path = "C:\\Users\\Jimakos\\Desktop\\";
-	String path = "C:\\Users\\user\\Desktop\\";
+	String path = "C:\\Users\\Jimakos\\Desktop\\";
+	//String path = "C:\\Users\\user\\Desktop\\";
 
 	ArrayList<Car> cars = new ArrayList<Car>();
 	ArrayList<Lorry> lorry = new ArrayList<Lorry>();
@@ -23,38 +23,38 @@ public class Model { // Creation of the Class model with 5 arraylists which cont
 
 	public Model() { // Temporarily I've created 10 vehicles of each category to be able to work
 						// around before i introduce the add car button method.
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Fiat", "Bravo", 154, "BBQ5080", 32.00, "Diesel", 3));
-		cars.add(new Car(45, 4, "Audi", "A3", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, 4, "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Fiat", "Bravo", 154, "BBQ5080", 32.00, "Diesel", 3));
+		cars.add(new Car(45, "4", "Audi", "A3", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
 
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
-		lorry.add(new Lorry(120000, 8, "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
+		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
 
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
-		minibus.add(new miniBus(130, 7, "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
+		minibus.add(new miniBus(130, "7", "Mercedes", "Vito", 110, "MPK5240", 120.32, 800));
 
 		customer.add(new Customer("test1", "test1", "test1", "test1", "test1", "test1", "test1", "test1"));
 

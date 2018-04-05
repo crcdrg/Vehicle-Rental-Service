@@ -7,11 +7,6 @@ public class addCar {
 	private JFrame frame;
 
 	/**
-	 * Launch the application.
-	 */
-	
-
-	/**
 	 * Create the application.
 	 */
 	public addCar() {

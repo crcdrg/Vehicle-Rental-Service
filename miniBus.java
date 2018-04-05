@@ -11,7 +11,7 @@ public class miniBus extends Vehicle implements Serializable {
 	private int door_no;
 	private int loading_cap;
 
-	public miniBus(int kilometeres, int numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, int loading_cap) {
+	public miniBus(int kilometeres, String numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, int loading_cap) {
 		super(kilometeres, numberOfSeats, make, model);
 		// TODO Auto-generated constructor stub
 		this.top_speed = top_speed;

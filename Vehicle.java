@@ -1,10 +1,11 @@
 
 public abstract class Vehicle { //Abstract class creation with 4 constructor attributes.
-	private int kilometres, numberOfSeats;
+	private int kilometres;
+	String numberOfSeats;
 	private String make, model;
 	
 	
-	public Vehicle(int kilometeres, int numberOfSeats, String make, String model) { //Initation of the constructor of the class Vehicle and what it is going to contain.
+	public Vehicle(int kilometeres, String numberOfSeats, String make, String model) { //Initation of the constructor of the class Vehicle and what it is going to contain.
 		this.kilometres = kilometres;
 		this.numberOfSeats = numberOfSeats;
 		this.make = make;
@@ -24,12 +25,12 @@ public abstract class Vehicle { //Abstract class creation with 4 constructor att
 	}
 
 
-	public int getNumberOfSeats() {
+	public String getNumberOfSeats() {
 		return numberOfSeats;
 	}
 
 
-	public void setNumberOfSeats(int numberOfSeats) {
+	public void setNumberOfSeats(String numberOfSeats) {
 		this.numberOfSeats = numberOfSeats;
 	}
 

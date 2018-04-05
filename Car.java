@@ -10,7 +10,7 @@ public class Car extends Vehicle implements Serializable {
 	private String fuel_type;
 	private int door_no;
 
-	public Car(int kilometeres, int numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, String fuel_type, int door_no) {
+	public Car(int kilometeres, String numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, String fuel_type, int door_no) {
 		super(kilometeres, numberOfSeats, make, model);
 		// TODO Auto-generated constructor stub
 		this.top_speed = top_speed;
