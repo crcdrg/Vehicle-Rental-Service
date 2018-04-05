@@ -1,192 +1,59 @@
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import java.awt.GridBagLayout;
-import javax.swing.JTextField;
+import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class CustomerView {
- private LoginController loginController;
- private Model model;
- private JFrame custframe;
- private JTextField userIDField;
- private JTextField nameField;
- private JTextField addressField;
- private JTextField phoneField;
- private JTextField emailField;
- private JTextField dobField;
- private JTextField usernameField;
- private JTextField passwordField;
 
- private JButton btnSave;
-
+	private JFrame frame;
+	private static JButton btnExit;
+	private CustomerController CustomerController;
 	/**
 	 * Create the application.
-	 * @param model 
-	 * @param loginController 
 	 */
-	public CustomerView() {
-	
-		initialize();
+	public CustomerView(Customer customer) {
+		initialize(customer);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
-		custframe = new JFrame();
-		custframe.setBounds(100, 100, 684, 465);
-		custframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		custframe.getContentPane().setLayout(null);
-		custframe.setVisible(true);
+	private void initialize(Customer customer) {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 684, 465);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		userIDField = new JTextField();
-		userIDField.setBounds(143, 11, 86, 20);
-		custframe.getContentPane().add(userIDField);
-		userIDField.setColumns(10);
+		JPanel UserDetailsPane = new JPanel();
+		UserDetailsPane.setBounds(191, 30, 467, 150);
+		frame.getContentPane().add(UserDetailsPane);
 		
-		nameField = new JTextField();
-		nameField.setColumns(10);
-		nameField.setBounds(143, 42, 86, 20);
-		custframe.getContentPane().add(nameField);
+		JPanel panel = new JPanel();
+		panel.setBounds(191, 216, 467, 199);
+		frame.getContentPane().add(panel);
 		
-		addressField = new JTextField();
-		addressField.setColumns(10);
-		addressField.setBounds(143, 73, 86, 20);
-		custframe.getContentPane().add(addressField);
+		JLabel lblVehicles = new JLabel("Vehicles:");
+		lblVehicles.setBounds(401, 191, 105, 14);
+		frame.getContentPane().add(lblVehicles);
 		
-		phoneField = new JTextField();
-		phoneField.setColumns(10);
-		phoneField.setBounds(143, 104, 86, 20);
-		custframe.getContentPane().add(phoneField);
 		
-		emailField = new JTextField();
-		emailField.setColumns(10);
-		emailField.setBounds(143, 135, 86, 20);
-		custframe.getContentPane().add(emailField);
+		JLabel lblPersonalDetails = new JLabel("Personal Details:");
+		lblPersonalDetails.setBounds(401, 11, 105, 14);
+		frame.getContentPane().add(lblPersonalDetails);
 		
-		dobField = new JTextField();
-		dobField.setColumns(10);
-		dobField.setBounds(143, 166, 86, 20);
-		custframe.getContentPane().add(dobField);
-		
-		usernameField = new JTextField();
-		usernameField.setColumns(10);
-		usernameField.setBounds(143, 197, 86, 20);
-		custframe.getContentPane().add(usernameField);
-		
-		passwordField = new JTextField();
-		passwordField.setColumns(10);
-		passwordField.setBounds(143, 228, 86, 20);
-		custframe.getContentPane().add(passwordField);
-		
-		JLabel lblNewLabel = new JLabel("User ID:");
-		lblNewLabel.setBounds(10, 14, 46, 14);
-		custframe.getContentPane().add(lblNewLabel);
-		
-		JLabel lblFirstname = new JLabel("Name:");
-		lblFirstname.setBounds(10, 45, 59, 14);
-		custframe.getContentPane().add(lblFirstname);
-		
-		JLabel lblAddress = new JLabel("Address:");
-		lblAddress.setBounds(10, 76, 59, 14);
-		custframe.getContentPane().add(lblAddress);
-		
-		JLabel lblPhoneNo = new JLabel("Phone No:");
-		lblPhoneNo.setBounds(10, 107, 76, 14);
-		custframe.getContentPane().add(lblPhoneNo);
-		
-		JLabel lblEmail = new JLabel("E-mail:");
-		lblEmail.setBounds(10, 138, 46, 14);
-		custframe.getContentPane().add(lblEmail);
-		
-		JLabel lblDateOfBirth = new JLabel("Date Of Birth:");
-		lblDateOfBirth.setBounds(10, 169, 86, 14);
-		custframe.getContentPane().add(lblDateOfBirth);
-		
-		JLabel lblUser = new JLabel("Username:");
-		lblUser.setBounds(10, 200, 76, 14);
-		custframe.getContentPane().add(lblUser);
-		
-		JLabel lblPassword = new JLabel("Password:");
-		lblPassword.setBounds(10, 231, 76, 14);
-		custframe.getContentPane().add(lblPassword);
-		
-		btnSave = new JButton("Save");
-		btnSave.setBounds(345, 41, 89, 23);
-		custframe.getContentPane().add(btnSave);
-	}
-
-	public String getUserIDFieldtext() {
-		return userIDField.getText();
-	}
-	public JTextField getUserIDField() {
-		return userIDField;
-	}
-
-	public String getNameFieldtext() {
-		return nameField.getText();
+	    btnExit = new JButton("Exit");
+		btnExit.setBounds(44, 370, 89, 23);
+		frame.getContentPane().add(btnExit);
+		btnExit.addActionListener(CustomerController);
+		frame.setVisible(true);
 	}
 	
-	public JTextField getNameField() {
-		return nameField;
+	public static void addListeners(CustomerController custController) {
+		// TODO Auto-generated method stub
+		btnExit.addActionListener(custController);
 	}
-	
-
-	public String getAddressFieldtext() {
-		return addressField.getText();
-	}
-	
-	public JTextField getAddressField() {
-		return addressField;
-	}
-
-	public String getPhoneFieldtext() {
-		return phoneField.getText();
-	}
-	
-	public JTextField getPhoneField() {
-		return phoneField;
-	}
-
-	public String getEmailFieldtext() {
-		return emailField.getText();
-	}
-	
-	public JTextField getEmailField() {
-		return emailField;
-	}
-
-	public String getDobFieldtext() {
-		return dobField.getText();
-	}
-	
-	public JTextField getDobField() {
-		return dobField;
-	}
-
-	public String getUsernameFieldtext() {
-		return usernameField.getText();
-	}
-	
-	public JTextField getUsernameField() {
-		return usernameField;
-	}
-
-	public String getPasswordFieldtext() {
-		return passwordField.getText();
-	}
-	
-	public JTextField getPasswordField() {
-		return passwordField;
-	}
-	
-	public void addListeners(custController custCntrl) {
-		
-		btnSave.addActionListener(custCntrl);
-	}
-	
 }

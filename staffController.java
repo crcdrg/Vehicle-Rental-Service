@@ -12,6 +12,12 @@ public class staffController implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		String action = arg0.getActionCommand();
+		if (action.equalsIgnoreCase("Add Customer")) {
+			
+			AddCustomerView customerGUI = new AddCustomerView();
+			AddCustomerController customerController = new AddCustomerController(customerGUI, model);
+			customerGUI.addListeners(customerController);
+		}
 	}
 }

@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class miniBus extends Vehicle {
+public class miniBus extends Vehicle implements Serializable {
 
 	
 	

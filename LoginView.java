@@ -11,6 +11,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionEvent;
 
 public class LoginView  { //the View class is introduced here. More information can be found in the myGUI class where the main GUI is created and then by using the View pattern everything is operated from here.
 
@@ -21,6 +22,7 @@ public class LoginView  { //the View class is introduced here. More information 
 	private JButton btnExit;
 	private JLabel lblRentalService;
 	private LoginController controller;
+	private JButton createButton;
 
 	/**
 	 * Create the application.
@@ -71,6 +73,10 @@ public class LoginView  { //the View class is introduced here. More information 
 		lblRentalService.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblRentalService.setBounds(250, 57, 163, 81);
 		frame.getContentPane().add(lblRentalService);
+		
+		createButton = new JButton("Register");
+		createButton.setBounds(10, 354, 89, 23);
+		frame.getContentPane().add(createButton);
 		frame.setVisible(true);
 		
 	}
@@ -89,6 +95,7 @@ public class LoginView  { //the View class is introduced here. More information 
 		
 		btnExit.addActionListener(custCntrl);
 		btnLogin.addActionListener(custCntrl);
+		createButton.addActionListener(custCntrl);
 	}
 	
 	
