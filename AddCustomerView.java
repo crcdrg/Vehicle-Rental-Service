@@ -19,7 +19,7 @@ public class AddCustomerView {
  private JTextField dobField;
  private JTextField usernameField;
  private JTextField passwordField;
-
+ private JButton btnBack;
  private JButton btnSave;
 
 	/**
@@ -40,7 +40,7 @@ public class AddCustomerView {
 		custframe.setBounds(100, 100, 684, 465);
 		custframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		custframe.getContentPane().setLayout(null);
-		custframe.setVisible(true);
+		
 		
 		userIDField = new JTextField();
 		userIDField.setBounds(143, 11, 86, 20);
@@ -117,6 +117,11 @@ public class AddCustomerView {
 		btnSave = new JButton("Save");
 		btnSave.setBounds(345, 41, 89, 23);
 		custframe.getContentPane().add(btnSave);
+		
+		btnBack = new JButton("Back");
+		btnBack.setBounds(19, 358, 89, 23);
+		custframe.getContentPane().add(btnBack);
+		custframe.setVisible(true);
 	}
 
 	public String getUserIDFieldtext() {
@@ -186,6 +191,7 @@ public class AddCustomerView {
 	public void addListeners(AddCustomerController custCntrl) {
 		
 		btnSave.addActionListener(custCntrl);
+		btnBack.addActionListener(custCntrl);
 	}
 	
 }

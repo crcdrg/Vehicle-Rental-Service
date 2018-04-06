@@ -203,10 +203,10 @@ public class addLorryView {
 	}
 
 	
-	public void addListeners(addMinibusController minibusController) {
+	public void addListeners(addLorryController lorryController) {
 		
-		btnSave.addActionListener(minibusController);
-		btnBack.addActionListener(minibusController);
+		btnSave.addActionListener(lorryController);
+		btnBack.addActionListener(lorryController);
 	}
 	
 	

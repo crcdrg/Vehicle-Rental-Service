@@ -33,5 +33,11 @@ public class staffController implements ActionListener {
 				addMinibusGUI.addListeners(minibusCntrl);
 			}
 		 
+		 if (action.equalsIgnoreCase("Add Lorry")){
+				addLorryView addLorryGUI = new addLorryView();
+				addLorryController lorryCntrl = new addLorryController(addLorryGUI, model);
+				addLorryGUI.addListeners(lorryCntrl);
+			}
+		 
 	}
 }
