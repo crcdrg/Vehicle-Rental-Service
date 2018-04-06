@@ -13,10 +13,6 @@ import java.awt.GridBagConstraints;
 import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 

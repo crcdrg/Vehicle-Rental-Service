@@ -7,8 +7,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-public class addCarView {
 
+public class addLorryView {
 	private JFrame frame;
 	private JTextField kilometres;
 	private JTextField seats;
@@ -17,27 +17,23 @@ public class addCarView {
 	private JTextField topSpeed;
 	private JTextField reg_number;
 	private JTextField hireRate;
-	private JTextField fuelType;
-	private JTextField doors;
+	private JTextField load_cap;
+	private JTextField load_weight;
 	private JButton btnSave;
 	private JButton btnBack;
-	/**
-	 * Create the application.
-	 */
-	public addCarView() {
+	
+	
+	public addLorryView() {
 		initialize();
 	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblAddANew = new JLabel("Add a new car");
+		JLabel lblAddANew = new JLabel("Add a new Lorry");
 		lblAddANew.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblAddANew.setBounds(260, 22, 166, 14);
 		frame.getContentPane().add(lblAddANew);
@@ -77,15 +73,15 @@ public class addCarView {
 		hireRate.setBounds(193, 179, 86, 20);
 		frame.getContentPane().add(hireRate);
 		
-		fuelType = new JTextField();
-		fuelType.setColumns(10);
-		fuelType.setBounds(370, 179, 86, 20);
-		frame.getContentPane().add(fuelType);
+		load_cap = new JTextField();
+		load_cap.setColumns(10);
+		load_cap.setBounds(370, 179, 86, 20);
+		frame.getContentPane().add(load_cap);
 		
-		doors = new JTextField();
-		doors.setColumns(10);
-		doors.setBounds(524, 179, 86, 20);
-		frame.getContentPane().add(doors);
+		load_weight = new JTextField();
+		load_weight.setColumns(10);
+		load_weight.setBounds(524, 179, 86, 20);
+		frame.getContentPane().add(load_weight);
 		
 		JLabel lblKilometres = new JLabel("Kilometres:");
 		lblKilometres.setBounds(22, 47, 86, 14);
@@ -115,11 +111,11 @@ public class addCarView {
 		lblDailyHireRate.setBounds(193, 154, 86, 14);
 		frame.getContentPane().add(lblDailyHireRate);
 		
-		JLabel lblFuelType = new JLabel("Fuel Type:");
+		JLabel lblFuelType = new JLabel("Load Cap");
 		lblFuelType.setBounds(370, 154, 86, 14);
 		frame.getContentPane().add(lblFuelType);
 		
-		JLabel lblDoorNumber = new JLabel("Door Number:");
+		JLabel lblDoorNumber = new JLabel("Load Weight:");
 		lblDoorNumber.setBounds(524, 154, 86, 14);
 		frame.getContentPane().add(lblDoorNumber);
 		
@@ -131,8 +127,7 @@ public class addCarView {
 		btnBack.setBounds(19, 358, 89, 23);
 		frame.getContentPane().add(btnBack);
 		frame.setVisible(true);
-		
-		
+	
 	}
 	
 	public String getKilometresText() {
@@ -191,28 +186,28 @@ public class addCarView {
 		return hireRate;
 	}
 	
-	public String getFuelTypeText() {
-		return fuelType.getText();
+	public String getload_capText() {
+		return load_cap.getText();
 	}
 
-	public JTextField getFuelType() {
-		return fuelType;
+	public JTextField getload_cap() {
+		return load_cap;
 	}
 	
-	public String getDoorsText() {
-		return doors.getText();
+	public String getload_weightText() {
+		return load_weight.getText();
 	}
 
-	public JTextField getDoors() {
-		return doors;
+	public JTextField getload_weight() {
+		return load_weight;
 	}
 
 	
-	public void addListeners(AddCarController carController) {
+	public void addListeners(addMinibusController minibusController) {
 		
-		btnSave.addActionListener(carController);
-		btnBack.addActionListener(carController);
+		btnSave.addActionListener(minibusController);
+		btnBack.addActionListener(minibusController);
 	}
 	
-
+	
 }

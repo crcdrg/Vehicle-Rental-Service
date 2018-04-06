@@ -26,5 +26,12 @@ public class staffController implements ActionListener {
 			AddCarController carCntrl = new AddCarController(addCarGUI, model);
 			addCarGUI.addListeners(carCntrl);
 		}
+		 
+		 if (action.equalsIgnoreCase("Add Minibus")){
+				addMinibusView addMinibusGUI = new addMinibusView();
+				addMinibusController minibusCntrl = new addMinibusController(addMinibusGUI, model);
+				addMinibusGUI.addListeners(minibusCntrl);
+			}
+		 
 	}
 }

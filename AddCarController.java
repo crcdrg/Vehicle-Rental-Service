@@ -27,7 +27,6 @@ public class AddCarController implements ActionListener {
 			int doorsField = Integer.parseInt(carview.getDoorsText());
 			
 			Car car = new Car(kmField, seatsField, brandField, modelField, topSpeedField, reg_noField, hireRateField, fuelTypeField, doorsField);
-			System.out.println("Perasthke");
 			model.addCar(car);
 			
 			carview.getKilometres().setText("");
@@ -40,6 +39,13 @@ public class AddCarController implements ActionListener {
 			carview.getFuelType().setText("");
 			carview.getDoors().setText("");
 			
+		
+		}
+		
+		if(action.equalsIgnoreCase("Back")) {
+			StaffView staffGUI = new StaffView();
+			staffController staffctrler = new staffController(staffGUI, model);
+			StaffView.addListeners(staffctrler);
 		}
 	}
 }

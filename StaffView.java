@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 public class StaffView {
 	private static JButton addCustomer;
 	private JFrame frame;
-	private static JButton addCar;
+	private static JButton addCar, addMinibus;
 	/**
 	 * Create the application.
 	 */
@@ -60,9 +60,9 @@ public class StaffView {
 		addLorry.setBounds(10, 98, 125, 23);
 		frame.getContentPane().add(addLorry);
 		
-		JButton addMiniBus = new JButton("Add Minibus");
-		addMiniBus.setBounds(10, 132, 125, 23);
-		frame.getContentPane().add(addMiniBus);
+		addMinibus = new JButton("Add Minibus");
+		addMinibus.setBounds(10, 132, 125, 23);
+		frame.getContentPane().add(addMinibus);
 		
 		JLabel lblVehicleType = new JLabel("Vehicle Type:");
 		lblVehicleType.setBounds(10, 34, 92, 14);
@@ -73,5 +73,9 @@ public class StaffView {
 		// TODO Auto-generated method stub
 		addCustomer.addActionListener(staffController);
 		addCar.addActionListener(staffController);
+		addMinibus.addActionListener(staffController);
+		//TODO na valw back button kai listener
+		//btnBack.addActionListener(staffController);
+		
 	}
 }
