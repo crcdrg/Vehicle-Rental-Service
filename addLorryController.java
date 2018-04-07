@@ -12,7 +12,7 @@ public class addLorryController implements ActionListener {
 		this.lorryview = lorryview;
 	}
 
-	@Override
+	@Override//This method works the same as all controllers. If the save button is pressed then take all the values in each field and add a new Lorry.
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		String action = arg0.getActionCommand();
@@ -44,7 +44,7 @@ public class addLorryController implements ActionListener {
 			lorryview.getload_weight().setText("");
 
 		}
-
+		//Back Button If to show admin panel.
 		if (action.equalsIgnoreCase("Back")) {
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);

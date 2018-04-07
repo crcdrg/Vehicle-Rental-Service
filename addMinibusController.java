@@ -11,7 +11,7 @@ public class addMinibusController implements ActionListener {
 		this.minibusview = minibusview;
 	}
 	
-	@Override
+	@Override //Same as all the Controller classes. If the save button is pressed take all the fields below, add a new minibus.
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
@@ -43,7 +43,7 @@ public class addMinibusController implements ActionListener {
 			
 			
 		}
-		
+		//Back button to show admin panel.
 		if(action.equalsIgnoreCase("Back")) {
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);

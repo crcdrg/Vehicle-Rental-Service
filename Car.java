@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class Car extends Vehicle implements Serializable {
 
-	
+	//Class Car that extends to Vehicle in order to be able to use the Vehicle's constructor and it also implements Serializable in order to be able to save the data.
 	
 	private int top_speed;
 	private String reg_no;
@@ -19,7 +19,7 @@ public class Car extends Vehicle implements Serializable {
 		this.fuel_type = fuel_type;
 		this.door_no = door_no;
 	}
-
+	//Setters and Getters for the values in the constructor.
 	public int getTop_speed() {
 		return top_speed;
 	}

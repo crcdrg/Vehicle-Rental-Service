@@ -124,6 +124,7 @@ public class AddCustomerView {
 		custframe.setVisible(true);
 	}
 
+	//Getters and Text getters in order to get parsed datatypes to String.
 	public String getUserIDFieldtext() {
 		return userIDField.getText();
 	}
@@ -188,6 +189,7 @@ public class AddCustomerView {
 		return passwordField;
 	}
 	
+	//Save and Back Button listeners.
 	public void addListeners(AddCustomerController custCntrl) {
 		
 		btnSave.addActionListener(custCntrl);

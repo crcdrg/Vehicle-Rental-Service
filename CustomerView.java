@@ -31,6 +31,8 @@ public class CustomerView {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
+	//Frame, Labels, Buttons and JTextFields creation for the GUI.
 	private void initialize(Customer customer) {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
@@ -115,8 +117,6 @@ public class CustomerView {
 		lblVehicles.setBounds(401, 191, 105, 14);
 		frame.getContentPane().add(lblVehicles);
 		
-		
-		
 		JLabel lblPersonalDetails = new JLabel("Personal Details:");
 		lblPersonalDetails.setBounds(401, 11, 105, 14);
 		frame.getContentPane().add(lblPersonalDetails);
@@ -124,12 +124,12 @@ public class CustomerView {
 	    btnExit = new JButton("Exit");
 		btnExit.setBounds(44, 370, 89, 23);
 		frame.getContentPane().add(btnExit);
-		btnExit.addActionListener(CustomerController);
 		frame.setVisible(true);
 	}
 	
 	public static void addListeners(CustomerController custController) {
 		// TODO Auto-generated method stub
+		//Exit button Listener
 		btnExit.addActionListener(custController);
 	}
 }

@@ -32,6 +32,7 @@ public class addCarView {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		//Frame, labels to distinguish which value is which and JTextFields that take values from the user.
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,7 +135,7 @@ public class addCarView {
 		
 		
 	}
-	
+	//Getters and Text getters in order to get the value inside the JTextField.
 	public String getKilometresText() {
 		return kilometres.getText();
 	}
@@ -207,7 +208,7 @@ public class addCarView {
 		return doors;
 	}
 
-	
+	//Listeners for the buttons Save and Back.
 	public void addListeners(AddCarController carController) {
 		
 		btnSave.addActionListener(carController);

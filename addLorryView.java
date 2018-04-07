@@ -26,7 +26,7 @@ public class addLorryView {
 	public addLorryView() {
 		initialize();
 	}
-	
+	//Frame, Labels, Buttons, JTextFields creation. Same as addCarView, addMinibusView and addLorryView Class.
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
@@ -130,6 +130,7 @@ public class addLorryView {
 	
 	}
 	
+	//Getters and Text getters to get all values in the fields.
 	public String getKilometresText() {
 		return kilometres.getText();
 	}
@@ -202,7 +203,7 @@ public class addLorryView {
 		return load_weight;
 	}
 
-	
+	//Listeners for Save and Back Button.
 	public void addListeners(addLorryController lorryController) {
 		
 		btnSave.addActionListener(lorryController);

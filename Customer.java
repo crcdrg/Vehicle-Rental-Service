@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
 public class Customer implements Serializable { //Customer Class creation which implements Serializable in order to be able to save entries and whatnot into a binary file.
-	
+	//Customer class that implements Serializable so the data of the user such as username, name, email etc can be saved into a file.
 	private String id, name, address, phone_no, email, dob, username, password; //Constructor creation of the Customer which is going to contain the following attributes.
 	
 			public Customer(String id, String name, String address, String phone_no, String email, String dob, String username, String password) {

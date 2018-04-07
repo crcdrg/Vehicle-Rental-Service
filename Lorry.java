@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
 public class Lorry extends Vehicle implements Serializable {
-
+	//Class Implements Serializable to be able to save data.
 	
 	
 	private int top_speed;
@@ -11,7 +11,7 @@ public class Lorry extends Vehicle implements Serializable {
 	private int door_no;
 	private int load_weight;
 	private int loading_cap;
-
+    //Constructor
 	public Lorry(int kilometeres, String numberOfSeats, String make, String model, int top_speed, String reg_no, double dailyHireRate, int loading_cap, int load_weight) {
 		super(kilometeres, numberOfSeats, make, model);
 		// TODO Auto-generated constructor stub
@@ -24,6 +24,7 @@ public class Lorry extends Vehicle implements Serializable {
 		this.load_weight = load_weight;
 	}
 
+	//Setters and Getters for the class Lorry.
 	public int getTop_speed() {
 		return top_speed;
 	}

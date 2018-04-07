@@ -17,7 +17,7 @@ public class AddCustomerController implements ActionListener { // This is the co
 		String action = e.getActionCommand();
 
 		if (action.equalsIgnoreCase("save")) { // If the user presses the save button then get all the fields below and
-												// put them into a new constructor and then create a new customer.
+												// create a new customer.
 
 			String userIDField = cust.getUserIDFieldtext();
 			String nameField = cust.getNameFieldtext();
@@ -43,7 +43,7 @@ public class AddCustomerController implements ActionListener { // This is the co
 			cust.getPasswordField().setText("");
 
 		}
-		
+		//Back button If to redirect back to admin panel
 		if(action.equalsIgnoreCase("Back")) {
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);

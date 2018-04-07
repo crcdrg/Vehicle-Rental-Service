@@ -35,6 +35,7 @@ public class LoginView  { //the View class is introduced here. More information 
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	//Frame, Buttons, Labels, JTextFields creation for the GUI.
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
@@ -81,6 +82,7 @@ public class LoginView  { //the View class is introduced here. More information 
 		
 	}
 	
+	//Getters and Textgetters to get the user input.
 	public String getUsernameText() {
 		
 	return	textField.getText().toString();
@@ -92,7 +94,7 @@ public class LoginView  { //the View class is introduced here. More information 
 	}
 	
 	public void addListeners(LoginController custCntrl) {
-		
+		//Listeners for the buttons Exit, Login and Register.
 		btnExit.addActionListener(custCntrl);
 		btnLogin.addActionListener(custCntrl);
 		createButton.addActionListener(custCntrl);

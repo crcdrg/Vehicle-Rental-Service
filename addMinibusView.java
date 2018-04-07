@@ -20,6 +20,7 @@ public class addMinibusView {
 		initialize();
 	}
 
+	//Frame, Labels, Textfields and Buttons creation.
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 684, 465);
@@ -114,6 +115,7 @@ public class addMinibusView {
 		
 	}
 	
+	//Getters and text getters for the parsed datatypes and for the text entered in the fields.
 	public String getKilometresText() {
 		return kilometres.getText();
 	}
@@ -178,6 +180,7 @@ public class addMinibusView {
 		return load_cap;
 	}
 	
+	//Listeners for Save Button and Back
 	public void addListeners(addMinibusController minibusController) {
 		
 		btnSave.addActionListener(minibusController);
