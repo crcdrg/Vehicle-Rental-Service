@@ -180,6 +180,12 @@ public class addMinibusView {
 		return load_cap;
 	}
 	
+	//Getter for MinibusView to use dispose.
+	
+	public JFrame getFrame() {
+		return frame;
+	}
+
 	//Listeners for Save Button and Back
 	public void addListeners(addMinibusController minibusController) {
 		

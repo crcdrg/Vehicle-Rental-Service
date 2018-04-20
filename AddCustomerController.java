@@ -1,11 +1,14 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
+
 public class AddCustomerController implements ActionListener { // This is the controller for the customer. This class is
 																// being used when a new customer is to be added.
 	private Model model;
 	private AddCustomerView cust;
-
+	private JFrame frame;
+	
 	public AddCustomerController(AddCustomerView cust, Model model) {
 		this.model = model;
 		this.cust = cust;
@@ -45,6 +48,8 @@ public class AddCustomerController implements ActionListener { // This is the co
 		}
 		//Back button If to redirect back to admin panel
 		if(action.equalsIgnoreCase("Back")) {
+			frame = cust.getCustframe();
+			frame.dispose();
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);
 			StaffView.addListeners(staffctrler);

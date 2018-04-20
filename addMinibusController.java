@@ -1,10 +1,12 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
+
 public class addMinibusController implements ActionListener {
 	private Model model;
 	private addMinibusView minibusview;
-	
+	private JFrame frame;
 	
 	public addMinibusController(addMinibusView minibusview, Model model) {
 		this.model = model;
@@ -45,6 +47,8 @@ public class addMinibusController implements ActionListener {
 		}
 		//Back button to show admin panel.
 		if(action.equalsIgnoreCase("Back")) {
+			frame = minibusview.getFrame();
+			frame.dispose();
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);
 			StaffView.addListeners(staffctrler);

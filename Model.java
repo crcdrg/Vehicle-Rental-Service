@@ -23,16 +23,16 @@ public class Model { // Creation of the Class model with 5 arraylists which cont
 
 	public Model() { // Temporarily I've created 10 vehicles of each category to be able to work
 						// around before i introduce the add car button method.
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "PLK3328", 55.50, "Gas", 5));
 		cars.add(new Car(45, "4", "Fiat", "Bravo", 154, "BBQ5080", 32.00, "Diesel", 3));
 		cars.add(new Car(45, "4", "Audi", "A3", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
-		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "NZH3328", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "YRZ2143", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "ASD1123", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "BRB2356", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "JYT6789", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "LKP3343", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "QWE1236", 55.50, "Gas", 5));
+		cars.add(new Car(45, "4", "Opel", "Corsa", 172, "BVC5486", 55.50, "Gas", 5));
 
 		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
 		lorry.add(new Lorry(120000, "8", "Ford", "Transit", 120, "ZZR1223", 88.88, 1200, 450));
@@ -513,5 +513,17 @@ public class Model { // Creation of the Class model with 5 arraylists which cont
 
 	}
 
+	public boolean deleteFromCars(String reg_no) {
+		
+		for (Car car : cars) {
+			if (car.getReg_no().equals(reg_no)) {
+				cars.remove(car);
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
 
 }

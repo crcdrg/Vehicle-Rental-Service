@@ -2,6 +2,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
+
 public class LoginController implements ActionListener { // This is the login Controller which is called everytime a
 															// button is pressed and depending on what button has been
 															// pressed it acts accordingly.
@@ -9,6 +11,7 @@ public class LoginController implements ActionListener { // This is the login Co
 	private LoginView view;
 	private String username;
 	private String password;
+	private JFrame frame;
 	//Constructor
 	public LoginController(LoginView view, Model model) {
 		this.model = model;
@@ -23,6 +26,8 @@ public class LoginController implements ActionListener { // This is the login Co
 		if (action.equalsIgnoreCase("exit")) {
 			System.exit(0);
 		}if (action.equalsIgnoreCase("Register")){
+			frame = view.getFrame();
+			frame.dispose();
 			model.createTestAccount();
 			AddCustomerView registerGUI = new AddCustomerView();
 			AddCustomerController customerController = new AddCustomerController(registerGUI, model);
@@ -83,10 +88,14 @@ public class LoginController implements ActionListener { // This is the login Co
 			}
 			//Depending the credentials, redirect the user to the user page or the admin page.
 			else if (userFound && userIsStaff) {
+				frame = view.getFrame();
+				frame.dispose();
 				StaffView staffGUI = new StaffView();
 				staffController staffctrler = new staffController(staffGUI, model);
 				StaffView.addListeners(staffctrler);
 			} else if (userFound && !userIsStaff) {
+				frame = view.getFrame();
+				frame.dispose();
 				CustomerView customerGUI = new CustomerView(cust);
 				CustomerController customerController = new CustomerController(customerGUI, model);
 				customerGUI.addListeners(customerController);

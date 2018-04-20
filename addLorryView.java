@@ -202,6 +202,11 @@ public class addLorryView {
 	public JTextField getload_weight() {
 		return load_weight;
 	}
+	
+	//Getter for the frame to use Dispose.
+	public JFrame getFrame() {
+		return frame;
+	}
 
 	//Listeners for Save and Back Button.
 	public void addListeners(addLorryController lorryController) {
@@ -209,6 +214,7 @@ public class addLorryView {
 		btnSave.addActionListener(lorryController);
 		btnBack.addActionListener(lorryController);
 	}
+	
 	
 	
 }

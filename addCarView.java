@@ -207,6 +207,11 @@ public class addCarView {
 	public JTextField getDoors() {
 		return doors;
 	}
+	
+	//Getter for the frame in order to dispose it.
+	public JFrame getFrame() {
+		return frame;
+	}
 
 	//Listeners for the buttons Save and Back.
 	public void addListeners(AddCarController carController) {
@@ -214,6 +219,4 @@ public class addCarView {
 		btnSave.addActionListener(carController);
 		btnBack.addActionListener(carController);
 	}
-	
-
 }

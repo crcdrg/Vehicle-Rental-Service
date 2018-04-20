@@ -189,6 +189,12 @@ public class AddCustomerView {
 		return passwordField;
 	}
 	
+	//This getter is used for the fame to use dispose().
+	
+	public JFrame getCustframe() {
+		return custframe;
+	}
+
 	//Save and Back Button listeners.
 	public void addListeners(AddCustomerController custCntrl) {
 		

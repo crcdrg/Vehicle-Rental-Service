@@ -5,11 +5,15 @@ import javax.swing.JFrame;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class StaffView {
 	private static JButton addCustomer;
 	private JFrame frame;
-	private static JButton addCar, addMinibus, addLorry;
+	private static JButton addCar, addMinibus, addLorry, removeVehicle;
+	public JTextField removeField;
+	public JLabel removeLabel;
+	
 	/**
 	 * Create the application.
 	 */
@@ -36,19 +40,14 @@ public class StaffView {
 		removeCustomer.setBounds(382, 151, 125, 23);
 		frame.getContentPane().add(removeCustomer);
 		
-		JButton removeVehicle = new JButton("Remove Vehicle");
-		removeVehicle.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		removeVehicle = new JButton("Remove Vehicle");
+
+		
 		removeVehicle.setBounds(247, 30, 125, 23);
 		frame.getContentPane().add(removeVehicle);
 		
 		JButton viewVehicles = new JButton("View Vehicles");
-		viewVehicles.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		
 		viewVehicles.setBounds(382, 30, 125, 23);
 		frame.getContentPane().add(viewVehicles);
 		
@@ -67,6 +66,21 @@ public class StaffView {
 		JLabel lblVehicleType = new JLabel("Vehicle Type:");
 		lblVehicleType.setBounds(10, 34, 92, 14);
 		frame.getContentPane().add(lblVehicleType);
+		
+		removeField = new JTextField();
+		removeField.setBounds(247, 64, 125, 20);
+		frame.getContentPane().add(removeField);
+		removeField.setColumns(10);
+		
+		removeLabel = new JLabel("");
+		removeLabel.setBounds(247, 98, 411, 14);
+		frame.getContentPane().add(removeLabel);
+		
+		
+	}
+	//Getter for the frame in order to be able to dispose of it in the controller class
+	public JFrame getFrame() {
+		return frame;
 	}
 
 	public static void addListeners(staffController staffController) {
@@ -77,6 +91,8 @@ public class StaffView {
 		addLorry.addActionListener(staffController);
 		//TODO na valw back button kai listener
 		//btnBack.addActionListener(staffController);
+		removeVehicle.addActionListener(staffController);
+		
 		
 	}
 }

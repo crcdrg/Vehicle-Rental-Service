@@ -2,11 +2,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.Action;
+import javax.swing.JFrame;
 
 public class addLorryController implements ActionListener {
 	private Model model;
 	private addLorryView lorryview;
-
+	private JFrame frame;
+	
 	public addLorryController(addLorryView lorryview, Model model) {
 		this.model = model;
 		this.lorryview = lorryview;
@@ -46,6 +48,8 @@ public class addLorryController implements ActionListener {
 		}
 		//Back Button If to show admin panel.
 		if (action.equalsIgnoreCase("Back")) {
+			frame = lorryview.getFrame();
+			frame.dispose();
 			StaffView staffGUI = new StaffView();
 			staffController staffctrler = new staffController(staffGUI, model);
 			StaffView.addListeners(staffctrler);

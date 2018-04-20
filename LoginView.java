@@ -93,6 +93,12 @@ public class LoginView  { //the View class is introduced here. More information 
 	return	passwordField.getText().toString();
 	}
 	
+
+	//This getter is used in LoginController class to hide the frame once the user logs in.
+	public JFrame getFrame() {
+		return frame;
+	}
+
 	public void addListeners(LoginController custCntrl) {
 		//Listeners for the buttons Exit, Login and Register.
 		btnExit.addActionListener(custCntrl);
